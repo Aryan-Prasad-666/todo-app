@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            margin: 1rem;
+        }
+
+        body{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .title{
+            align-self: center;
+        }
+
+        .todo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .formarea{
+            margin: 2rem;
+            width: 50%;
+            border: 2px solid rgb(163, 163, 24);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .form{
+            margin: 2rem;
+        }
+
+        .input{
+            height: 50px;
+            width: 400px;
+            color: black;
+            background-color: aqua;
+        }
+
+        .inputbutton{
+            border: 2px solid rgb(117, 177, 180);
+            height: 50px;
+            width: 100px;
+            border-radius: 10%;
+            background-color: #115559;
+            font-size: large;
+        }
+
+        .input::placeholder{
+            font-size: large;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <section class="todo">
+        <h1 class="title"> Welcome to the todo app </h1>
+
+        <div class="formarea">
+            <h1>Enter your goal here</h1>
+            <form class="form">
+                <input class="input" type="text" placeholder="Enter your target here" name="todoinput">
+                <button class="inputbutton" name="todoinput">Submit</button>
+            </form>
+
+            <div class="list">
+                <h1>TODO List: </h1>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
