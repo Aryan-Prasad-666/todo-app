@@ -25,6 +25,14 @@ def addtask():
     connection.close()
     return redirect(url_for('home'))
 
+@app.route('/<int:task_id>', methods=['POST'])
+def delete_task(task_id):
+    connection = sqlite3.connect(database_dir + "/tasks.db")
+    cursor = connection.cursor()
+    cursor.execute('DELETE FROM tasklist WHERE id = ?', (task_id,))
+    connection.commit()
+    connection.close()
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
