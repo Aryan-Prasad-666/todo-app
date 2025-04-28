@@ -64,6 +64,13 @@
             font-size: large;
             color: rgb(0, 0, 0);
         }
+
+        .ul li{
+            list-style: none;
+            font-size:xx-large;
+            margin: 1rem;
+            color: rgb(113, 136, 157);
+        }
     </style>
 </head>
 <body>
@@ -72,13 +79,21 @@
 
         <div class="formarea">
             <h1>Enter your goal here</h1>
-            <form class="form" action="/submit" method="post">
-                <input class="input" type="text" placeholder="Enter your target here" name="todoinput">
+            <form class="form" action="/" method="post">
+                <input class="input" type="text" placeholder="Enter your target here" name="newtask">
                 <button class="inputbutton" name="todoinput">Submit</button>
             </form>
 
             <div class="list">
                 <h1>TODO List: </h1>
+
+                <ul class="ul">
+                    {% for task in tasks %}
+                        <li>{{ task[1] }}</li>  
+                    {% endfor %}
+                </ul>
+
+                
             </div>
         </div>
     </section>
